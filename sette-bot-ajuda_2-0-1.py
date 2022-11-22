@@ -64,5 +64,9 @@ def verificar(mensagem):
 def responder(mensagem):
     bot.reply_to(mensagem," Sua mensagem foi encaminhada para o grupo responsável. ")
 
-
-bot.polling()
+#Instância do Bot
+while(True):
+    try:
+        bot.polling(none_stop=True, interval=3)
+    except:
+        time.sleep(3)
